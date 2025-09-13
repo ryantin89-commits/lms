@@ -2,9 +2,9 @@
  * CEN 3024 - Software Development I
  * September 15, 2025
  * Patron.java
- * This class acts as the actual rules for managing the patrons like adding, removing, checking if
- * an ID is valid, making sure fines are in range, and stopping duplicate records.
- * Controls the list of patrons that the system works with.
+ * This class is the blueprint for a single library user.  It holds the basic info like the patron's ID,
+ * name, address, and fine amount.  It doesn't do anything on its own, it just keeps all the data together
+ * in one object so the other parts of the program can use it.
  */
 
 package lms;
@@ -56,7 +56,7 @@ public class Patron {
         this.fineAmount = fineAmount;
     }
 
-    //This is for the list view
+    //This shows the list view nice and neat
     @Override
     public String toString() {
         return String.format("ID: %07d | Name: %s | Address: %s | Fine Amount: $%.2f", id, name, address, fineAmount);
